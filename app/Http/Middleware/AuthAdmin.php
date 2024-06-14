@@ -13,8 +13,12 @@ class AuthAdmin
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next): Response
+    public function handle( Request $request, Closure $next): Response
     {
-        return $next($request);
+        if(Auth::user()->utype != 'ADM')
+        {
+            session()->flush();
+            return redirect()->route('login');
+        }
     }
 }
