@@ -19,3 +19,5 @@ Route::middleware('auth')->group(function(){
 Route::middleware(['auth','auth.admin'])->group(function(){
     Route::get('/admin',[AdminController::class,'index'])->name('admin.index');
 });
+
+Route::get('/shop',[ShopController::class,'index'])->name('shop.index');
