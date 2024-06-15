@@ -28,3 +28,5 @@ Route::get('/cart',[CartController::class,'index'])->name('cart.index');
 
 Route::put('/cart/update', [CartController::class, 'updateCart'])->name('cart.update’);
 
+Route::delete('/cart/remove', [CartController::class, 'removeCart'])->name('cart.remove');
+
