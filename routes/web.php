@@ -21,3 +21,6 @@ Route::middleware(['auth','auth.admin'])->group(function(){
 });
 
 Route::get('/shop',[ShopController::class,'index'])->name('shop.index');
+
+Route::get('/product/{slug}',[ShopController::class,'productDetials'])->name('shop.product.details');
+
