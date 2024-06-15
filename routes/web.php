@@ -26,3 +26,5 @@ Route::get('/product/{slug}',[ShopController::class,'productDetials'])->name('sh
 
 Route::get('/cart',[CartController::class,'index'])->name('cart.index');
 
+Route::put('/cart/update', [CartController::class, 'updateCart'])->name('cart.update’);
+
