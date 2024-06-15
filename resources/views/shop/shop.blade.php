@@ -77,6 +77,12 @@
     @endforeach
 </div>
 {{$products->links("pagination.default")}}
-
+<select class="form-select" name="orderby" id="orderby">
+      <option value="-1" {{ $order==-1? 'selected':''}}>Default</option>
+      <option value="1" {{ $order==1? 'selected':''}}>Date, New To Old</option>
+      <option value="2" {{ $order==2? 'selected':''}}>Date, Old To New</option>
+      <option value="3" {{ $order==3? 'selected':''}}>Price, Low To High</option>
+      <option value="4" {{ $order==4? 'selected':''}}>Price, High To Low</option>
+</select>
 
 @endsection
