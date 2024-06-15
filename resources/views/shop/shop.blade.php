@@ -76,6 +76,7 @@
     </div>
     @endforeach
 </div>
-{{$products->links()}}
+{{$products->links("pagination.default")}}
+
 
 @endsection
